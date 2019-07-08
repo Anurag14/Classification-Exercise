@@ -17,6 +17,7 @@ ResNet v1:
 * [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385.pdf)
 ResNet v2:
 * [Identity Mappings in Deep Residual Networks](https://arxiv.org/pdf/1603.05027.pdf)
+
 | Model|n|200-epoch accuracy|Original paper accuracy |sec/epoch GTX1080Ti |
 |------------:|--:|-------:|-----------------------:|---: |
 ResNet20   v1|  3| 92.16 %|                 91.25 %|35
@@ -27,8 +28,9 @@ ResNet110  v1| 18| 92.65 %|            93.39+-.16 %|165
 ResNet164  v1| 27|     - %|                 94.07 %|  -
 ResNet1001 v1|N/A|     - %|                 92.39 %|  -
 &nbsp;
-Model|n|200-epoch accuracy|Original paper accuracy |sec/epoch GTX1080Ti
-:------------|--:|-------:|-----------------------:|---:
+
+|Model|n|200-epoch accuracy|Original paper accuracy |sec/epoch GTX1080Ti |
+|------------:|--:|-------:|-----------------------:|---: |
 ResNet20   v2|  2|     - %|                     - %|---
 ResNet32   v2|N/A| NA    %|            NA         %| NA
 ResNet44   v2|N/A| NA    %|            NA         %| NA
