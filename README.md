@@ -14,13 +14,11 @@
 References:
 [1](https://github.com/kuangliu/pytorch-cifar) [2](https://modelzoo.co/model/cifar-10-on-pytorch-with-vgg-resnet) [3](https://github.com/keras-team/keras/issues/10371) 
 ResNet v1:
-[Deep Residual Learning for Image Recognition
-](https://arxiv.org/pdf/1512.03385.pdf)
+* [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385.pdf)
 ResNet v2:
-[Identity Mappings in Deep Residual Networks
-](https://arxiv.org/pdf/1603.05027.pdf)
-Model|n|200-epoch accuracy|Original paper accuracy |sec/epoch GTX1080Ti
-:------------|--:|-------:|-----------------------:|---:
+* [Identity Mappings in Deep Residual Networks](https://arxiv.org/pdf/1603.05027.pdf)
+| Model|n|200-epoch accuracy|Original paper accuracy |sec/epoch GTX1080Ti |
+|------------:|--:|-------:|-----------------------:|---: |
 ResNet20   v1|  3| 92.16 %|                 91.25 %|35
 ResNet32   v1|  5| 92.46 %|                 92.49 %|50
 ResNet44   v1|  7| 92.50 %|                 92.83 %|70
