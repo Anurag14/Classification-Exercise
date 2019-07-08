@@ -12,4 +12,4 @@
 
 
 References:
-[1](https://github.com/kuangliu/pytorch-cifar)
+[1](https://github.com/kuangliu/pytorch-cifar) [2](https://modelzoo.co/model/cifar-10-on-pytorch-with-vgg-resnet) [3](https://github.com/keras-team/keras/issues/10371) 
