@@ -9,3 +9,7 @@
   2. (x-y)^3
   3. Cosine similarity loss (1 - (x^Ty)/(||X||.||y||)) where x and y are two vectors and ||x|| and ||y|| are the norm values and ^T denotes the transpose operations
   4. (x/||x|| - y/||y||)^3
+
+
+References:
+[1](https://github.com/kuangliu/pytorch-cifar)
