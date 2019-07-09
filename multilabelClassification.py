@@ -1,5 +1,6 @@
 """
-Trains a ResNet on the CIFAR10 dataset.
+Fine tunes a ResNet on the dataset for multi label classification where orginal resnet is 
+trained for multi class classfication only for 10 classes.
 """
 
 from __future__ import print_function
