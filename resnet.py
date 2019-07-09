@@ -47,7 +47,7 @@ def resnet_layer(inputs,
     return x
 
 
-def resnet_v1(input_shape, depth, num_classes=10, pre_trained=False, model_file_path=None):
+def resnet_v1(input_shape, depth, num_classes=10, pre_trained=False, model_file_path=None, fc_activation='softmax'):
     """ResNet Version 1 Model builder [a]
     Stacks of 2 x (3 x 3) Conv2D-BN-ReLU
     Last ReLU is after the shortcut connection.
@@ -72,7 +72,7 @@ def resnet_v1(input_shape, depth, num_classes=10, pre_trained=False, model_file_
     if pre_trained==True and model_file_path is not None:
         pre_trained_model = Model.load_model(model_file_path)
         outputs = Dense(num_classes,
-                    activation='softmax',
+                    activation=fc_activation,
                     kernel_initializer='he_normal')(pre_trained_model.layers[-1].output)
 
         # Instantiate model.
@@ -122,7 +122,7 @@ def resnet_v1(input_shape, depth, num_classes=10, pre_trained=False, model_file_
     return model
 
 
-def resnet_v2(input_shape, depth, num_classes=10, model_file_path=None):
+def resnet_v2(input_shape, depth, num_classes=10, model_file_path=None, fc_activation='softmax'):
     """ResNet Version 2 Model builder [b]
     Stacks of (1 x 1)-(3 x 3)-(1 x 1) BN-ReLU-Conv2D or also known as
     bottleneck layer
@@ -149,7 +149,7 @@ def resnet_v2(input_shape, depth, num_classes=10, model_file_path=None):
     if pre_trained==True and model_file_path is not None:
         pre_trained_model = Model.load_model(model_file_path)
         outputs = Dense(num_classes,
-                    activation='softmax',
+                    activation=fc_activation,
                     kernel_initializer='he_normal')(pre_trained_model.layers[-1].output)
 
         # Instantiate model.
