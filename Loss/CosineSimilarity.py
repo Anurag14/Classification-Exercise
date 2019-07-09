@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-class MeanSquareLoss(object):
+class CosineLoss(object):
     def __init__(self, minibatch=True):
         self._minibatch = minibatch 
 
