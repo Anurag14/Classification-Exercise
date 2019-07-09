@@ -86,11 +86,14 @@ def lr_schedule(epoch):
     return lr
 
 if version == 2:
-    model = resnet_v2(input_shape=input_shape, depth=depth)
+    model = resnet_v2(input_shape=input_shape, depth=depth, fc_activation='sigmoid')
 else:
-    model = resnet_v1(input_shape=input_shape, depth=depth)
-
-model.compile(loss='categorical_crossentropy',
+    model = resnet_v1(input_shape=input_shape, depth=depth, fc_activation='sigmoid')
+# loss and activation combination that needs to be experimented with
+#   categorical cross entropy + softmax
+#   binary cross entropy + sigmoid
+#   focal + sigmoid
+model.compile(loss='binary_crossentropy',
               optimizer=Adam(lr=lr_schedule(0)),
               metrics=['accuracy'])
 model.summary()
